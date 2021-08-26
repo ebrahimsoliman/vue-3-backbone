@@ -1,26 +1,7 @@
 <template>
   <div class="container-fluid">
+    <if-data-binding></if-data-binding>
 
-    <div class="row my-5">
-      <!--      start if-->
-      <div class="col-12 col-md-6">
-        <div v-if="boolean">this is a conditional div</div>
-        <button class="btn  btn-outline-primary mt-3"
-                v-on:click="toggle">toggle
-        </button>
-      </div>
-      <!--end if-->
-      <div class="col-12 col-md-6">
-        <!--        start data binding-->
-        <div>{{ i }}</div>
-        <!--        end data binding-->
-        <!--        start event binding-->
-        <button class="btn btn-primary mt-3"
-                v-on:click="increment">Increment
-        </button>
-        <!--        end event binding-->
-      </div>
-    </div>
     <div class="row my-5">
       <!--region property binding and for loop-->
       <div class="col-12 col-md-6 col-lg-4 my-3"
@@ -81,6 +62,7 @@
 
 <script>
 import { mapGetters } from "vuex";
+import IfDataBinding  from "./IfDataBinding";
 
 export default {
   name : "HelloWorld",
@@ -93,25 +75,26 @@ export default {
       price   : 0,
       quantity: 0,
       i       : 1,
-      boolean : false,
+      boolean : false
       /*products: [{
-        name    : "cheese ",
-        price   : 5,
-        quantity: 3
-      },
-                 {
-                   name    : "cheese ",
-                   price   : 5,
-                   quantity: 3
-                 },
-                 {
-                   name    : "cheese ",
-                   price   : 5,
-                   quantity: 3
-                 }]*/
+       name    : "cheese ",
+       price   : 5,
+       quantity: 3
+       },
+       {
+       name    : "cheese ",
+       price   : 5,
+       quantity: 3
+       },
+       {
+       name    : "cheese ",
+       price   : 5,
+       quantity: 3
+       }]*/
     };
-  },computed:{...mapGetters(['product'])},
-  methods: {
+  },
+  computed  : { ...mapGetters(["product"]) },
+  methods   : {
     //to add products into array
     addproduct() {
       /* this.products.push({
@@ -132,6 +115,9 @@ export default {
     toggle() {
       this.boolean = !this.boolean;
     }
+  },
+  components: {
+    IfDataBinding
   }
 };
 </script>
