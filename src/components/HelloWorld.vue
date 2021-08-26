@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <if-data-binding></if-data-binding>
-
+    <create-product></create-product>
     <div class="row my-5">
       <!--region property binding and for loop-->
       <div class="col-12 col-md-6 col-lg-4 my-3"
@@ -15,54 +15,14 @@
       </div>
       <!--endregion-->
     </div>
-    <div class="row my-5">
-      <div class="col-12">
-        <!--region Forms-->
-        <!--        form events (prevent default)-->
-        <form v-on:submit.prevent="addproduct()">
-          <div class="row">
-            <div class="col-7 mx-auto">
-              <label for="name">Name</label>
-              <!--              two way binding-->
-              <input type="text"
-                     class="form-control"
-                     id="name"
-                     v-model="name">
-            </div>
-            <div class="col-7 mx-auto">
 
-              <label for="quantity">Quantity</label>
-              <input type="number"
-                     class="form-control"
-                     v-model="quantity"
-                     id="quantity">
-            </div>
-            <div class="col-7 mx-auto">
-
-              <label for="price">Price</label>
-
-              <input type="number"
-                     class="form-control mb-3"
-                     v-model="price"
-                     id="price">
-            </div>
-            <div class="col-7 mx-auto">
-
-              <input type="submit"
-                     value="add product"
-                     class="btn-outline-success btn">
-            </div>
-          </div>
-        </form>
-        <!--endregion-->
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
 import IfDataBinding  from "./IfDataBinding";
+import CreateProduct  from "./CreateProduct";
 
 export default {
   name : "HelloWorld",
@@ -117,7 +77,8 @@ export default {
     }
   },
   components: {
-    IfDataBinding
+    IfDataBinding,
+    CreateProduct
   }
 };
 </script>
