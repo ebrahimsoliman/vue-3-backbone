@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import IfDataBinding from "./IfDataBinding";
-import CreateProduct from "./CreateProduct";
-import GetProducts   from "./GetProducts";
+import IfDataBinding from "./Vue/IfDataBinding";
+import CreateProduct from "./Vue/CreateProduct";
+import GetProducts   from "./Vue/GetProducts";
 
 export default {
   name : "HelloWorld",

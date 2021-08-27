@@ -1,7 +1,15 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/">Vue</router-link>
+    |
+    <router-link to="/bootstrap">Bootstrap</router-link>
+    |
+    <router-link to="/owl">Owl Carousel</router-link>
+    |
+    <router-link to="/aos">Animate On Scroll</router-link>
+    |
+    <router-link to="/odometer">OdoMeter</router-link>
+    |
   </div>
   <router-view />
 </template>
