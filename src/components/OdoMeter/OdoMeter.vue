@@ -14,12 +14,11 @@ export default {
     new Odometer({
                             el   : el,
                             value: 0,
-                            // Any option (other than auto and selector) can be passed in here
                             format: "",
                             theme : "default"
                           });
 
-    el.innerHTML = 555
+    el.innerHTML = 123
   }
 };
 </script>
