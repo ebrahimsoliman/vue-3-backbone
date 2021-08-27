@@ -1,28 +1,15 @@
 <template>
-  <div class="container-fluid">
+  <div class="container">
     <if-data-binding></if-data-binding>
     <create-product></create-product>
-    <div class="row my-5">
-      <!--region property binding and for loop-->
-      <div class="col-12 col-md-6 col-lg-4 my-3"
-           v-for="product in product"
-           v-bind:key="product.name">
-        <div class="card">
-          <p class="card-header">{{ product.name }}</p>
-          <p>QUANTITY: {{ product.quantity }}</p>
-          <p>PRICE: {{ product.price }}</p>
-        </div>
-      </div>
-      <!--endregion-->
-    </div>
-
+    <get-products></get-products>
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import IfDataBinding  from "./IfDataBinding";
-import CreateProduct  from "./CreateProduct";
+import IfDataBinding from "./IfDataBinding";
+import CreateProduct from "./CreateProduct";
+import GetProducts   from "./GetProducts";
 
 export default {
   name : "HelloWorld",
@@ -53,22 +40,9 @@ export default {
        }]*/
     };
   },
-  computed  : { ...mapGetters(["product"]) },
+
   methods   : {
-    //to add products into array
-    addproduct() {
-      /* this.products.push({
-       name    : this.name,
-       price   : this.price,
-       quantity: this.quantity
-       });*/
-      this.$store.dispatch("addProduct",
-                           {
-                             name    : this.name,
-                             price   : this.price,
-                             quantity: this.quantity
-                           });
-    },
+
     increment() {
       this.i++;
     },
@@ -78,7 +52,8 @@ export default {
   },
   components: {
     IfDataBinding,
-    CreateProduct
+    CreateProduct,
+    GetProducts
   }
 };
 </script>
