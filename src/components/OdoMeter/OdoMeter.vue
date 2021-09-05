@@ -10,15 +10,15 @@ import Odometer from "odometer/odometer";
 export default {
   name: "OdoMeter",
   mounted() {
-    let el = document.getElementById("odometer")
+    let el = document.getElementById("odometer");
     new Odometer({
-                            el   : el,
-                            value: 0,
-                            format: "",
-                            theme : "default"
-                          });
+                   el    : el,
+                   value : 0,
+                   format: "",
+                   theme : "default"
+                 });
 
-    el.innerHTML = 123
+    el.innerHTML = 123;
   }
 };
 </script>

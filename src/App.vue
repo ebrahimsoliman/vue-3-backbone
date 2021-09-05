@@ -10,6 +10,8 @@
     |
     <router-link to="/odometer">OdoMeter</router-link>
     |
+    <router-link to="/fullpage">Full Page Js</router-link>
+
   </div>
   <router-view />
 </template>

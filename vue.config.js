@@ -10,5 +10,16 @@ module.exports = {
                                 }),
       new Dotenv()
     ]
-  }
+  },
+
+  pluginOptions: {
+    quasar: {
+      importStrategy: 'kebab',
+      rtlSupport: true
+    }
+  },
+
+  transpileDependencies: [
+    'quasar'
+  ]
 };

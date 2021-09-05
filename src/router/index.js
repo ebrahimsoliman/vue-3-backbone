@@ -7,6 +7,7 @@ import Bootstrap       from "../views/Bootstrap";
 import OwlCarousel     from "../views/OwlCarousel";
 import AnimateOnScroll from "../views/AnimateOnScroll";
 import OdoMeterJs      from "../views/OdoMeterJs";
+import FullPageJs      from "../views/FullPageJs";
 
 const routes = [
   {
@@ -33,6 +34,11 @@ const routes = [
     path     : "/odometer",
     name     : "OdoMeter",
     component: OdoMeterJs
+  },
+  {
+    path     : "/fullpage",
+    name     : "FullPage",
+    component: FullPageJs
   }
 ];
 
