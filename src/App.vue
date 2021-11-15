@@ -11,6 +11,8 @@
     <router-link to="/odometer">OdoMeter</router-link>
     |
     <a href="/fullpage">Full Page Js</a>
+ |
+    <a href="/api">API</a>
 
   </div>
   <router-view />

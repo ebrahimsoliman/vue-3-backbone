@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
+    "@lottiefiles/lottie-player": "^1.4.1",
     "@popperjs/core": "^2.9.3",
     "@quasar/cli": "^1.2.1",
     "@quasar/extras": "^1.0.0",
