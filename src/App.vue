@@ -1,4 +1,7 @@
 <template>
+  <Loading v-if="loading"/>
+  <Toasts v-if="toast"/>
+  <Modal v-if="modal"/>
   <div id="nav">
     <router-link to="/">Vue</router-link>
     |
@@ -11,11 +14,11 @@
     <router-link to="/odometer">OdoMeter</router-link>
     |
     <a href="/fullpage">Full Page Js</a>
- |
+    |
     <a href="/api">API</a>
 
   </div>
-  <router-view />
+  <router-view/>
 </template>
 
 <style lang="scss">
@@ -40,3 +43,27 @@
   }
 }
 </style>
+<script>
+import Loading from "./components/Validation/Loading";
+import {mapGetters} from "vuex";
+import Toasts from "./components/Validation/Toasts";
+import Modal from "./components/Validation/Modal";
+
+
+export default {
+  components: {Modal, Toasts, Loading},
+  data() {
+    return {load: false}
+  },
+  watch: {
+    loading: function () {
+      this.load = this.loading
+      console.log(this.load)
+    },
+  }, mounted() {
+    this.$store.dispatch('tryLogin');
+  },
+  computed: {...mapGetters(["loading", "toast", "modal"])},
+
+}
+</script>

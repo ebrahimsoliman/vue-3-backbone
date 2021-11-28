@@ -1,6 +1,8 @@
 import {createStore} from "vuex";
 import productsModule from "./products/index";
 import meetupsModule from "./Meetups/index";
+import uiModule from "./Ui/index";
+import authModule from './Auth/index'
 
 
 export default createStore({
@@ -9,6 +11,8 @@ export default createStore({
     actions: {},
     modules: {
         prod: productsModule,
-        meet: meetupsModule
+        meet: meetupsModule,
+        ui: uiModule,
+        auth: authModule,
     }
 });
