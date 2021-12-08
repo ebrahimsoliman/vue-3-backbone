@@ -19,13 +19,13 @@ import "aos/dist/aos.css";
 import "odometer/odometer";
 import "odometer/themes/odometer-theme-default.css";
 import "fullpage.js/dist/fullpage.css";
-import { Quasar }        from "quasar";
-import quasarUserOptions from "./quasar-user-options";
+
 import "fullpage.js/dist/fullpage.js";
 import "fullpage.js/vendors/easings.min";
 import "fullpage.js/dist/fullpage.extensions.min";
 import "@lottiefiles/lottie-player";
-
+import { Quasar }        from "quasar";
+import quasarUserOptions from "./quasar-user-options";
 createApp(App)
   .use(Quasar,
        quasarUserOptions)
